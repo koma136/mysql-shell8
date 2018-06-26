@@ -9,5 +9,6 @@ RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
   && mkdir /docker-entrypoint-initdb.d
 
 COPY docker-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["mysqlsh"]
