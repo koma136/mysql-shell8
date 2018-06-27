@@ -11,4 +11,4 @@ RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
 
 COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["mysqlsh --log-level=DEBUG3"]
+CMD ["mysqlsh"]

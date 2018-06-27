@@ -32,4 +32,4 @@ if [ "$1" = 'mysqlsh' ]; then
     exit 0
 fi
 
-exec "$@"
+exec "$@ --log-level=DEBUG3"
