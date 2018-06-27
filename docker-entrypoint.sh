@@ -27,9 +27,9 @@ if [ "$1" = 'mysqlsh' ]; then
     fi
     if [ "$MYSQLSH_SCRIPT" ]; then
     echo "Start $MYSQLSH_SCRIPT"
-	mysqlsh "$MYSQL_USER@$MYSQL_HOST:$MYSQL_PORT" --dbpassword="$MYSQL_PASSWORD" -f "$MYSQLSH_SCRIPT" || true
+	mysqlsh "$MYSQL_USER@$MYSQL_HOST:$MYSQL_PORT" --dbpassword="$MYSQL_PASSWORD" -f "$MYSQLSH_SCRIPT" --log-level=DEBUG3 || true
     fi
     exit 0
 fi
 
-exec "$@ --log-level=DEBUG3"
+exec "$@"
